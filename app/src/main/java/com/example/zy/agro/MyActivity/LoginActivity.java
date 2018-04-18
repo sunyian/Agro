@@ -1,8 +1,7 @@
-package com.example.zy.agro;
+package com.example.zy.agro.MyActivity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -10,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.zy.agro.R;
+import com.example.zy.agro.ReturnForm.JsonUtils;
+import com.example.zy.agro.ReturnForm.Result;
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
 
 import org.json.JSONObject;
@@ -47,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, Signup.class);
+                Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
                 startActivity(intent);
             }
         });
@@ -72,19 +74,23 @@ public class LoginActivity extends AppCompatActivity {
                         try {
                             Response response = client.newCall(request).execute();
                             String re_info = response.body().string();
-//                            Log.d("success_re", re_info);
-                            Result result = JsonUtils.jsonToPojo(re_info, Result.class);
+                            Log.d("success_re", re_info);
+//                            Result result = JsonUtils.jsonToPojo(re_info, Result.class);
 //                            Log.d("success_re", result.getSuccess().toString());
-                            if (result.getSuccess().toString().equals("true"))
-                            {
-                                Intent intent = new Intent(LoginActivity.this, InfoActivity.class);
-                                startActivity(intent);
-                                finish();
-                                SharedPreferences preferences = getSharedPreferences("user_login",0);
-                                SharedPreferences.Editor editor = preferences.edit();
-                                editor.putString("user_login", text_phone.getText().toString());
-                                editor.commit();
-                            }
+//                            if (result.getSuccess().toString().equals("true"))
+//                            {
+//                                Intent intent = new Intent(LoginActivity.this, InfoActivity.class);
+//                                startActivity(intent);
+//                                finish();
+//                                SharedPreferences preferences = getSharedPreferences("user_login",0);
+//                                SharedPreferences.Editor editor = preferences.edit();
+//                                editor.putString("user_login", text_phone.getText().toString());
+//                                editor.commit();
+//                            }
+//                            else
+//                            {
+//                                Log.d("success_re", re_info);
+//                            }
                         } catch (IOException e) {
                             e.printStackTrace();
                         }

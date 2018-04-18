@@ -11,21 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/QMUI.Compat.NoActionBar">
-        <activity android:name=".Ad">
+        <activity android:name=".MyActivity.AdActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Guide" />
+        <activity android:name=".MyActivity.GuideActivity" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".MyActivity.LoginActivity"
             android:launchMode="singleTask" />
         <activity
-            android:name=".Signup"
+            android:name=".MyActivity.SignupActivity"
             android:launchMode="singleTask" />
-        <activity android:name=".InfoActivity"></activity>
+        <activity android:name=".MyActivity.InfoActivity"></activity>
     </application>
 
 </manifest>

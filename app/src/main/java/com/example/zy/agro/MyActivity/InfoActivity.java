@@ -1,4 +1,4 @@
-package com.example.zy.agro;
+package com.example.zy.agro.MyActivity;
 
 
 import android.annotation.SuppressLint;
@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.example.zy.agro.R;
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
 import com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView;
 import com.qmuiteam.qmui.widget.grouplist.QMUIGroupListView;

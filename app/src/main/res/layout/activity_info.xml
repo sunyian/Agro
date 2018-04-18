@@ -6,7 +6,7 @@
     android:fitsSystemWindows="true"
     android:layout_height="match_parent"
     android:background="@drawable/bg_info"
-    tools:context=".InfoActivity">
+    tools:context=".MyActivity.InfoActivity">
 
     <ScrollView
         android:layout_width="match_parent"

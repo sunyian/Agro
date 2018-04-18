@@ -1,21 +1,21 @@
-package com.example.zy.agro;
+package com.example.zy.agro.MyActivity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.zy.agro.MyAdapter.GuideAdapter;
+import com.example.zy.agro.R;
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
 
-import java.lang.ref.PhantomReference;
 import java.util.ArrayList;
 
-public class Guide extends AppCompatActivity  {
+public class GuideActivity extends AppCompatActivity  {
 
     private ArrayList<View> list;
     private ViewPager viewPager;
@@ -95,7 +95,7 @@ public class Guide extends AppCompatActivity  {
         guide_skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Guide.this, LoginActivity.class);
+                Intent intent = new Intent(GuideActivity.this, LoginActivity.class);
                 finish();
                 startActivity(intent);
             }
