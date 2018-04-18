@@ -71,8 +71,15 @@ public class LoginActivity extends AppCompatActivity {
                         try {
                             Response response = client.newCall(request).execute();
                             String re_info = response.body().string();
-                            Log.d("success_re", re_info);
-//                            Result result = JsonUtils.jsonToPojo(re_info, Result.class);
+//                            Log.d("success_re", re_info);
+                            Result result = JsonUtils.jsonToPojo(re_info, Result.class);
+//                            Log.d("success_re", result.getSuccess().toString());
+                            if (result.getSuccess().toString().equals("true"))
+                            {
+                                Intent intent = new Intent(LoginActivity.this, InfoActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
