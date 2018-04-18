@@ -44,9 +44,20 @@ public class Ad extends AppCompatActivity {
         }
         else
         {
-            Intent intent = new Intent(Ad.this, LoginActivity.class);
-            startActivity(intent);
-            finish();
+            SharedPreferences preferences_user = getSharedPreferences("user_login", 0);
+            String user_true = preferences_user.getString("user_login", "false");
+            if (user_true.equals("false")) {
+                Intent intent = new Intent(Ad.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+            else
+            {
+                Intent intent = new Intent(Ad.this, InfoActivity.class);
+                startActivity(intent);
+                finish();
+
+            }
 
         }
     }

@@ -2,6 +2,7 @@ package com.example.zy.agro;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -79,6 +80,10 @@ public class LoginActivity extends AppCompatActivity {
                                 Intent intent = new Intent(LoginActivity.this, InfoActivity.class);
                                 startActivity(intent);
                                 finish();
+                                SharedPreferences preferences = getSharedPreferences("user_login",0);
+                                SharedPreferences.Editor editor = preferences.edit();
+                                editor.putString("user_login", text_phone.getText().toString());
+                                editor.commit();
                             }
                         } catch (IOException e) {
                             e.printStackTrace();
