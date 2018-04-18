@@ -70,9 +70,9 @@ public class LoginActivity extends AppCompatActivity {
                                 .build();
                         try {
                             Response response = client.newCall(request).execute();
-                            String re_info;
-                            re_info = response.body().string();
+                            String re_info = response.body().string();
                             Log.d("success_re", re_info);
+//                            Result result = JsonUtils.jsonToPojo(re_info, Result.class);
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
