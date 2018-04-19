@@ -4,13 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/bg_such"
+    android:background="@drawable/bg_main"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".MyActivity.LoginActivity">
 
     <LinearLayout
-        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:gravity="center"
         android:layout_height="wrap_content"
@@ -112,16 +111,27 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"/>
 
-            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            <!--<com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton-->
+                <!--android:id="@+id/btn_login"-->
+                <!--app:qmui_borderColor="#FFFFFF"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="8"-->
+                <!--android:textSize="25dp"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:clickable="true"-->
+                <!--android:text="登陆"/>-->
+
+            <Button
                 android:id="@+id/btn_login"
-                app:qmui_borderColor="#FFFFFF"
                 android:layout_width="0dp"
                 android:layout_weight="8"
-                android:textSize="30dp"
-                android:gravity="center"
-                android:layout_height="40dp"
-                android:clickable="true"
-                android:text="登陆"/>
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:background="#66ccff"
+                android:textColor="#ffffff"
+                android:alpha="0.7"
+                android:text="登录"/>
 
             <ImageView
                 android:layout_width="0dp"
@@ -145,7 +155,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="8"
-                android:text="忘记密码"/>
+                android:textColor="#66ccff"
+                android:text="忘记密码？"/>
 
             <TextView
                 android:id="@+id/text_login_sign"
@@ -153,6 +164,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="5"
+                android:textColor="#66ccff"
                 android:text="新用户注册"/>
         </LinearLayout>
 
@@ -161,7 +173,7 @@
             android:clickable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#66CCFF"
+            android:textColor="#ffffff"
             android:text="游客登录"/>
 
     </LinearLayout>
@@ -169,6 +181,21 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginBottom="70dp"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:text="第三方登录"/>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_marginBottom="20dp"
