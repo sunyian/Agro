@@ -5,7 +5,9 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.zy.agro.R;
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
@@ -14,6 +16,7 @@ import com.qmuiteam.qmui.widget.grouplist.QMUIGroupListView;
 
 public class InfoActivity extends AppCompatActivity {
 
+    private long exitTime = 0;
 
     @SuppressLint("Range")
     @Override
@@ -25,6 +28,26 @@ public class InfoActivity extends AppCompatActivity {
         QMUIStatusBarHelper.translucent(this);
         initlistview_info(qmuiGroupListView);
 
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            exit();
+            return false;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    public void exit() {
+        if ((System.currentTimeMillis() - exitTime) > 2000) {
+            Toast.makeText(getApplicationContext(), "再按一次退出程序",
+                    Toast.LENGTH_SHORT).show();
+            exitTime = System.currentTimeMillis();
+        } else {
+            finish();
+            System.exit(0);
+        }
     }
 
     private Context getActivity() {

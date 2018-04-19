@@ -36,6 +36,9 @@ public class LoginActivity extends AppCompatActivity {
     TextView text_password;
     Button btn_login;
     TextView text_tourist;
+    TextView text_forget;
+    TextView text_login_sign;
+
     private int mCurrentDialogStyle = com.qmuiteam.qmui.R.style.QMUI_Dialog;
 
     private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
@@ -49,16 +52,25 @@ public class LoginActivity extends AppCompatActivity {
         text_password = findViewById(R.id.text_password);
         btn_login = findViewById(R.id.btn_login);
         text_tourist = findViewById(R.id.text_tourist);
+        text_forget = findViewById(R.id.text_forget);
+        text_login_sign = findViewById(R.id.text_login_sign);
 
         QMUIStatusBarHelper.translucent(this);
         QMUIStatusBarHelper.setStatusBarLightMode(getBaseFragmentActivity());
 
-        TextView text_login_sign = findViewById(R.id.text_login_sign);
         text_login_sign.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        text_forget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, ChangePasswordActivity.class);
                 startActivity(intent);
             }
         });

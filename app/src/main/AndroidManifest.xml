@@ -26,7 +26,9 @@
         <activity
             android:name=".MyActivity.SignupActivity"
             android:launchMode="singleTask" />
-        <activity android:name=".MyActivity.InfoActivity"></activity>
+        <activity android:name=".MyActivity.InfoActivity" />
+        <activity android:name=".MyActivity.ChangePasswordActivity"
+            android:launchMode="singleTask" />
     </application>
 
 </manifest>
