@@ -47,7 +47,9 @@ public class AdActivity extends AppCompatActivity {
         {
             SharedPreferences preferences_user = getSharedPreferences("user_login", 0);
             String user_true = preferences_user.getString("user_login", "false");
-            if (user_true.equals("false")) {
+            SharedPreferences preferences_tourist = getSharedPreferences("tourist", 0);
+            String tourist = preferences_tourist.getString("tourist", "false");
+            if (user_true.equals("false") && tourist.equals("false")) {
                 Intent intent = new Intent(AdActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();

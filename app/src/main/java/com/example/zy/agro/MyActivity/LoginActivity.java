@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView text_phone;
     TextView text_password;
     Button btn_login;
-    TextView text_unlogin;
+    TextView text_tourist;
     private int mCurrentDialogStyle = com.qmuiteam.qmui.R.style.QMUI_Dialog;
 
     private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
@@ -48,6 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         text_phone = findViewById(R.id.text_phone);
         text_password = findViewById(R.id.text_password);
         btn_login = findViewById(R.id.btn_login);
+        text_tourist = findViewById(R.id.text_tourist);
 
         QMUIStatusBarHelper.translucent(this);
         QMUIStatusBarHelper.setStatusBarLightMode(getBaseFragmentActivity());
@@ -62,14 +63,25 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        text_tourist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences preferences = getSharedPreferences("tourist",0);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("tourist", "true");
+                editor.commit();
+                Intent intent = new Intent(LoginActivity.this, InfoActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-//                            JSONObject json_re = new JSONObject(re_info);
-//                            Log.d("success_re", json_re.toString());
                         OkHttpClient client = new OkHttpClient();
                         FormBody formBody = new FormBody.Builder()
                                 .add("username", text_phone.getText().toString())
