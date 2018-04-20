@@ -1,18 +1,18 @@
 package com.example.zy.agro;
 
 import android.app.Application;
-import android.util.Log;
+import android.content.Context;
 
 public class MyApplication extends Application {
-    private static String message;
+    private static Context context;
     @Override
     public void onCreate() {
         super.onCreate();
-        message = "MyApplication";
+        context = getApplicationContext();
     }
 
-    public static void showmessage()
-    {
-        Log.d("myapp", message);
+    public static Context getContext() {
+        return context;
     }
 }
+

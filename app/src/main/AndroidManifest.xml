@@ -27,8 +27,14 @@
             android:name=".MyActivity.SignupActivity"
             android:launchMode="singleTask" />
         <activity android:name=".MyActivity.InfoActivity" />
-        <activity android:name=".MyActivity.ChangePasswordActivity"
+        <activity
+            android:name=".MyActivity.ChangePasswordActivity"
             android:launchMode="singleTask" />
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".video_page.more_video" />
+        <activity android:name=".video_play.play_video"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" /> <!-- or android:screenOrientation="landscape"-->
     </application>
 
 </manifest>

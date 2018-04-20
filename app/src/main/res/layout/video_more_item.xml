@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ImageView
+        android:id="@+id/image_video"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/loli" />
+    <!--以后不要用wrap对于大图片，注意注意-->
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@id/image_video"
+        android:id="@+id/title_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="20dp" />
+    <TextView
+        android:layout_toRightOf="@id/image_video"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/class_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp" />
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:id="@+id/watch_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp" />
+
+</RelativeLayout>

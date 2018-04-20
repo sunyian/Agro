@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.zy.agro.MainActivity;
 import com.example.zy.agro.MyApplication;
 import com.example.zy.agro.R;
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
@@ -56,7 +57,7 @@ public class AdActivity extends AppCompatActivity {
             }
             else
             {
-                Intent intent = new Intent(AdActivity.this, InfoActivity.class);
+                Intent intent = new Intent(AdActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
 

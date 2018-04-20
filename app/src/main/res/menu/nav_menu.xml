@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_collect"
+            android:icon="@drawable/star"
+            android:title="我的收藏"/>
+        <item
+            android:id="@+id/nav_question"
+            android:icon="@drawable/chat_1"
+            android:title="我的提问"/>
+        <item
+            android:id="@+id/nav_daily"
+            android:icon="@drawable/book"
+            android:title="我的养殖日志"/>
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@drawable/avatar"
+            android:title="个人信息"/>
+    </group>
+</menu>

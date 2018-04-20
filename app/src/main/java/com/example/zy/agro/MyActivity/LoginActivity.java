@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.zy.agro.MainActivity;
 import com.example.zy.agro.MyApplication;
 import com.example.zy.agro.R;
 import com.example.zy.agro.ReturnForm.JsonUtils;
@@ -82,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString("tourist", "true");
                 editor.commit();
-                Intent intent = new Intent(LoginActivity.this, InfoActivity.class);
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -110,7 +111,7 @@ public class LoginActivity extends AppCompatActivity {
                             Result result = JsonUtils.jsonToPojo(re_info, Result.class);
                             if (result.getSuccess().toString().equals("true"))
                             {
-                                Intent intent = new Intent(LoginActivity.this, InfoActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                 startActivity(intent);
                                 finish();
                                 SharedPreferences preferences = getSharedPreferences("user_login",0);

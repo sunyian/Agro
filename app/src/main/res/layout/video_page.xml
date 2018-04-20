@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v4.view.ViewPager
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/carousel"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"/>
+    <LinearLayout
+        android:layout_alignParentEnd="true"
+        android:id="@+id/dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="145dp"
+        android:layout_marginEnd="15dp">
+        <View
+            android:id="@+id/dot_1"
+            android:layout_width="5dip"
+            android:layout_height="5dip"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:background="@mipmap/dotb"/>
+        <View
+            android:id="@+id/dot_2"
+            android:layout_width="5dip"
+            android:layout_height="5dip"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:background="@mipmap/dotw"/>
+        <View
+            android:id="@+id/dot_3"
+            android:layout_width="5dip"
+            android:layout_height="5dip"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:background="@mipmap/dotw"/>
+        <View
+            android:id="@+id/dot_4"
+            android:layout_width="5dip"
+            android:layout_height="5dip"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:background="@mipmap/dotw"/>
+    </LinearLayout>
+
+
+
+    <!--<ImageView-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:id="@+id/article"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_marginStart="10dp"-->
+        <!--android:layout_marginEnd="10dp"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:src="@drawable/mai"-->
+        <!--android:background="#FCFCFC"-->
+        <!--android:scaleType="fitXY"/>-->
+
+    <!--种植业-->
+    <TextView
+        android:onClick="buttonClick"
+        android:id="@+id/planting"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/carousel"
+        android:text="种植业"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/planting_more"
+        android:onClick="buttonClick"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:text="更多"
+        android:layout_below="@id/carousel"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"/>
+
+    <LinearLayout
+        android:id="@+id/planting_line1"
+        android:layout_below="@id/planting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1">
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:onClick="buttonClick"
+            android:id="@+id/planting_video1"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="180dp"
+            android:background="@drawable/video_shape"
+            android:elevation="4dp">
+
+            <ImageView
+                android:id="@+id/planting_image1"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/lunb5" />
+            <TextView
+                android:id="@+id/planting_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="动物世界"
+                android:textSize="18dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/planting_image1"
+                android:layout_marginTop="5dp" />
+            <TextView
+                android:id="@+id/planting_number1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="播放量:1500"
+                android:textSize="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/planting_title1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1">
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:elevation="4dp"
+            android:background="@drawable/video_shape"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="180dp"
+            android:id="@+id/planting_video2">
+            <ImageView
+                android:id="@+id/planting_image2"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/lunb6"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/planting_title2"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="种土豆"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/planting_image2"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:id="@+id/planting_number2"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:text="播放量:1200"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/planting_title2"
+                android:layout_marginBottom="5dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1">
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/planting_line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1">
+        </RelativeLayout>
+        <RelativeLayout
+            android:onClick="buttonClick"
+            android:id="@+id/video3"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="180dp"
+            android:background="@drawable/video_shape"
+            android:elevation="4dp">
+
+            <ImageView
+                android:id="@+id/planting_image3"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/lunb7" />
+            <TextView
+                android:id="@+id/planting_title3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="动物世界"
+                android:textSize="18dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/planting_image3"/>
+            <TextView
+                android:id="@+id/planting_number3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="播放量:1500"
+                android:textSize="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/planting_title3"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1">
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:elevation="4dp"
+            android:background="@drawable/video_shape"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="180dp"
+            android:id="@+id/planting_video4">
+            <ImageView
+                android:id="@+id/planting_image4"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/lunb8"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/planting_title4"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="种土豆"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/planting_image4"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:id="@+id/planting_number4"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:text="播放量:1200"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/planting_title4"
+                android:layout_marginBottom="5dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1">
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

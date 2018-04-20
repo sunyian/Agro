@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingTop="10dp">
+        <TextView
+            android:textAlignment="center"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="10"
+            android:textSize="18dp"
+            android:text="问卷"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:textAlignment="center"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="10"
+            android:textSize="18dp"
+            android:text="文档"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="这是问卷页"/>
+
+</RelativeLayout>

@@ -3,6 +3,8 @@ package com.example.zy.agro.MyActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
@@ -78,13 +80,27 @@ public class InfoActivity extends AppCompatActivity {
 
         QMUICommonListItemView log_item = qmuiGroupListView.createItemView("养殖日志");
         log_item.setAccessoryType(QMUICommonListItemView.ACCESSORY_TYPE_CHEVRON);
+        QMUICommonListItemView log_exit = qmuiGroupListView.createItemView("退出登录");
+        log_item.setAccessoryType(QMUICommonListItemView.ACCESSORY_TYPE_CHEVRON);
+
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (v instanceof QMUICommonListItemView) {
                     CharSequence text = ((QMUICommonListItemView) v).getText();
-                    if (text.equals("积分日志"))
+                    if (text.equals("退出登录"))
                     {
+                        Intent intent = new Intent(InfoActivity.this, LoginActivity.class);
+                        startActivity(intent);
+                        finish();
+                        SharedPreferences preferences = getSharedPreferences("tourist",0);
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putString("tourist", "false");
+                        editor.commit();
+                        preferences = getSharedPreferences("user_login", 0);
+                        editor = preferences.edit();
+                        editor.putString("user_login", "false");
+                        editor.commit();
                     }
                 }
             }
@@ -107,6 +123,10 @@ public class InfoActivity extends AppCompatActivity {
 
         QMUIGroupListView.newSection(getContext())
                 .addItemView(log_item, onClickListener)
+                .addTo(qmuiGroupListView);
+
+        QMUIGroupListView.newSection(getContext())
+                .addItemView(log_exit, onClickListener)
                 .addTo(qmuiGroupListView);
     }
 

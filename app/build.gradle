@@ -18,6 +18,12 @@ android {
     }
 }
 
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+}
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //noinspection GradleCompatible
@@ -33,4 +39,15 @@ dependencies {
     implementation files('libs/jackson-databind-2.9.3.jar')
     implementation files('libs/jackson-core-2.9.3.jar')
     implementation files('libs/jackson-annotations-2.9.3.jar')
+    compile 'com.android.support:design:27.0.1'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+
+//    jiecao
+    compile 'fm.jiecao:jiecaovideoplayer:5.5'
+
+//    bottonnagtivebar
+    compile 'com.ashokvarma.android:bottom-navigation-bar:1.4.1'
+
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
+
 }
