@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/bg_main"
+    android:background="@drawable/bg_te1"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".MyActivity.LoginActivity">
@@ -181,21 +181,6 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_marginBottom="70dp"
-            android:layout_width="match_parent"
-            android:layout_gravity="bottom"
-            android:gravity="center"
-            android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#ffffff"
-                    android:text="第三方登录"/>
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_marginBottom="20dp"
